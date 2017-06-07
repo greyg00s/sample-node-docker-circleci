@@ -1,7 +1,7 @@
 #!/bin/bash
 docker push trose/sample-node
 
-ssh -i ~/.ssh/ocean_rsa deploy@build.me << EOF
+ssh -i ~/.ssh/ocean_rsa deploy@138.197.22.215 << EOF
 docker pull trose/sample-node:latest
 docker stop web || true
 docker rm web || true
